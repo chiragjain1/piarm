@@ -47,3 +47,11 @@ class BlockDetector:
                 break
         self.cap.release()
         cv2.destroyAllWindows()
+if __name__ == "__main__":
+    # Example color range for a blue block in LAB color space
+    # These ranges should be adjusted based on your block's color and lighting conditions
+    blue_range = (np.array([20, 115, -70]), np.array([120, 255, -40]))
+    
+    detector = BlockDetector(color_range=blue_range)
+    detector.run()
+
