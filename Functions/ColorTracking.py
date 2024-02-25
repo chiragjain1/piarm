@@ -354,25 +354,7 @@ def run(img):
             track = True
             #print(count,distance)
             # 累计判断
-            if action_finish:
-                if distance < 0.3:
-                    center_list.extend((world_x, world_y))
-                    count += 1
-                    if start_count_t1:
-                        start_count_t1 = False
-                        t1 = time.time()
-                    if time.time() - t1 > 1.5:
-                        rotation_angle = rect[2]
-                        start_count_t1 = True
-                        world_X, world_Y = np.mean(np.array(center_list).reshape(count, 2), axis=0)
-                        count = 0
-                        center_list = []
-                        start_pick_up = True
-                else:
-                    t1 = time.time()
-                    start_count_t1 = True
-                    count = 0
-                    center_list = []
+
     return img
 
 if __name__ == '__main__':
