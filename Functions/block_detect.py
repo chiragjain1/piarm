@@ -50,7 +50,7 @@ class BlockDetector:
 if __name__ == "__main__":
     # Example color range for a blue block in LAB color space
     # These ranges should be adjusted based on your block's color and lighting conditions
-    blue_range = (np.array([20, 115, -70]), np.array([120, 255, -40]))
+    blue_range = (np.array([0, 20, 0]), np.array([50, 70, 255]))
     
     detector = BlockDetector(color_range=blue_range)
     detector.run()
