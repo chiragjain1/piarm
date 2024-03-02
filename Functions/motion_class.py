@@ -15,9 +15,6 @@ from perception import Perception
 import math 
 import time 
 
-if sys.version_info.major == 2:
-    print('Please run this program with python3!')
-    sys.exit(0)
 
 class Motion():
     def __init__(self):
@@ -162,7 +159,8 @@ if __name__ == '__main__':
     result= motion.run(color, my_camera)
     color = 'blue'
     result= motion.run(color, my_camera)
-
+    color = 'green'
+    result= motion.run(color, my_camera)
 
 
 
