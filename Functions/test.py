@@ -130,7 +130,7 @@ class Motion():
         self.grippers(False)
         #resnet = self.go_to_location((27, 10-2, 12), -90, -90, 0)
         #time.sleep(resnet[2]/1000)
-        time.sleep()
+        time.sleep(1)
         if self.first_move:
             self.first_to_object(color, my_camera) # Go close to the location of the found block 
         if not self.first_move and not self.unreachable:
