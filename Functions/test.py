@@ -35,11 +35,11 @@ class Motion():
 
     def go_to_location (self,coordinates,alpha, alpha1, alpha2, movetime = None ):
             result = self.AK.setPitchRangeMoving(coordinates, alpha, alpha1, alpha2, movetime)
+            print(result)
             return result
     
     def detect_object(self, color, my_camera):
         world_x, world_y = self.perception.get_coordinates(color, my_camera)
-        print(world_x,world_y)
         return (world_x, world_y)
 
     def first_to_object (self, color, my_camera):
@@ -122,12 +122,12 @@ class Motion():
 
     def run (self, color, my_camera):
         self.starting_position()
-        #self.perception.run(color,5,my_camera)
-        resnet = self.go_to_location((473, 106-2, 12), -90, -90, 0)
+        self.perception.run(color,5,my_camera)
+        #resnet = self.go_to_location((473, 106-2, 12), -90, -90, 0)
         #time.sleep(resnet[2]/1000) 
         time.sleep(1)
         self.grippers(False)
-        self.go_to_location((273, 106-2, 12), -90, -90, 0)
+        #self.go_to_location((273, 106-2, 12), -90, -90, 0)
         time.sleep(1)
         if self.first_move:
             self.first_to_object(color, my_camera) # Go close to the location of the found block 
