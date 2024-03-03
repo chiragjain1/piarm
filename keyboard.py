@@ -67,7 +67,8 @@ while True:
     #         js.quit()
     #         pygame.joystick.quit()
     if connected is True:
-        pygame.event.pump()      
+        pygame.event.pump()
+        keys = pygame.key.get_pressed()
         try:
             if keys[pygame.K_LEFT] :
                 change[0] -= step_width
