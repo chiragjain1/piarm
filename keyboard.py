@@ -22,6 +22,13 @@ action_map = ["CROSS", "CIRCLE", "", "SQUARE", "TRIANGLE", "L1", "R1", "L2", "R2
 
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 pygame.display.init()
+win = pygame.display.set_mode((500,250))
+
+pygame.font.init()
+font = pygame.font.SysFont("Arial", 20)
+text_surface = font.render("Click to enable.", False, (220,0,0))
+win.fill((255,255,255))
+win.blit(text_surface, (40,100))
 keys = pygame.key.get_pressed()
 msg = {}
 pygame.joystick.init()
