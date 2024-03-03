@@ -124,12 +124,12 @@ class Motion():
     def run (self, color, my_camera):
         self.starting_position()
         self.perception.run(color,5,my_camera)
-        #resnet = self.go_to_location((0, 0-2, 12), -90, -90, 0)
-        #time.sleep(resnet[2]/1000) 
+        resnet = self.go_to_location((-7.38, 16-2, 2), -90, -90, 0)
+        time.sleep(resnet[2]/1000) 
         time.sleep(1)
         self.grippers(False)
-        #resnet = self.go_to_location((27, 10-2, 12), -90, -90, 0)
-        #time.sleep(resnet[2]/1000)
+        resnet = self.go_to_location((-14.0, 11.5, 1.5), -90, -90, 0)
+        time.sleep(resnet[2]/1000)
         time.sleep(1)
         if self.first_move:
             self.first_to_object(color, my_camera) # Go close to the location of the found block 
