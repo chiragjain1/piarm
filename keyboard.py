@@ -70,7 +70,8 @@ while True:
         pygame.event.pump()
         keys = pygame.key.get_pressed()
         try:
-            if keys[pygame.K_LEFT] :
+            if keys[pygame.K_a] :
+                print("hi")
                 change[0] -= step_width
                 change[0] = 0 if change[0] < 0 else change[0]
                 cmd["params"] = [20, 1, 1, change[0]]
