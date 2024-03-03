@@ -69,22 +69,22 @@ while True:
     if connected is True:
         pygame.event.pump()      
         try:
-            if keys[K_LEFT] :
+            if keys[pygame.K_LEFT] :
                 change[0] -= step_width
                 change[0] = 0 if change[0] < 0 else change[0]
                 cmd["params"] = [20, 1, 1, change[0]]
                 r = requests.post(url, json = cmd).json()
-            if keys[K_RIGHT] :
+            if keys[pygame.K_RIGHT] :
                 change[0] += step_width
                 change[0] = 1000 if change[0] > 1000 else change[0]
                 cmd["params"] = [20, 1, 1, change[0]]
                 r = requests.post(url, json = cmd).json()
-            if keys[K_UP] :
+            if keys[pygame.K_UP] :
                 change[1] -= step_width
                 change[1] = 0 if change[1] < 0 else change[1]
                 cmd["params"] = [20, 1, 2, change[1]]
                 r = requests.post(url, json = cmd).json()
-            if keys[K_DOWN] :
+            if keys[pygame.K_DOWN] :
                 change[1] += step_width
                 change[1] = 1000 if change[1] > 1000 else change[1]
                 cmd["params"] = [20, 1, 2, change[1]]
