@@ -33,6 +33,7 @@ change = [500,500,136,931,795,500]
 while True:
     pygame.event.pump()
     keys = pygame.key.get_pressed()
+    print(keys)
     try:
         if keys[pygame.K_a] :
             print("hi")
