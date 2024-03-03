@@ -124,7 +124,7 @@ class Motion():
         self.starting_position()
         #self.perception.run(color,5,my_camera)
         resnet = self.go_to_location((473, 106-2, 12), -90, -90, 0)
-        time.sleep(resnet[2]/1000) 
+        #time.sleep(resnet[2]/1000) 
         time.sleep(1)
         self.grippers(False)
         self.go_to_location((273, 106-2, 12), -90, -90, 0)
