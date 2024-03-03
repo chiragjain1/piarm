@@ -21,6 +21,7 @@ key_map = {"PSB_CROSS":2, "PSB_CIRCLE":1, "PSB_SQUARE":3, "PSB_TRIANGLE":0,
 action_map = ["CROSS", "CIRCLE", "", "SQUARE", "TRIANGLE", "L1", "R1", "L2", "R2", "SELECT", "START", "", "L3", "R3"]
 
 os.environ["SDL_VIDEODRIVER"] = "dummy"
+pygame.init()
 pygame.display.init()
 win = pygame.display.set_mode((500,250))
 
